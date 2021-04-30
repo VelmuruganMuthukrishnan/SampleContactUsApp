@@ -7,9 +7,9 @@ using SampleContactUsApp.Data.Model;
 using SampleContactUsApp.Repository;
 namespace SampleContactUsApp.Services
 {
-    public class ContactServices : IContactUsForm
+    public class ContactServices : IContactUsService
     {
-        public void SaveData(ContactUsForm contactUsForm)
+        public void SaveData(ContactUsModel contactUsForm)
         {
             string file = System.Web.HttpContext.Current.Server.MapPath("~/Temp/Sampleapp.txt");
 

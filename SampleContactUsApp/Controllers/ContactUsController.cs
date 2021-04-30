@@ -9,6 +9,8 @@ using SampleContactUsApp.Services;
 using SampleContactUsApp.Repository;
 using SampleContactUsApp.Data.Model;
 using AutoMapper;
+using SampleContactUsApp.MapperConfig;
+
 namespace SampleContactUsApp.Controllers
 {
     public class ContactUsController : Controller
@@ -36,11 +38,12 @@ namespace SampleContactUsApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var config = new MapperConfiguration(cfg => cfg.CreateMap<ContactUsFormViewModel, ContactUsForm>());
-                var mapper = new Mapper(config);
-                ContactServices services = new ContactServices();
+                IContactUsService services = new ContactServices();
 
-                var contactDTO = mapper.Map<ContactUsFormViewModel, ContactUsForm>(contactUsForm);
+                var config = new AutoMapperConfig().Configure();
+                IMapper imapper = config.CreateMapper();
+
+                var contactDTO = imapper.Map<ContactUsFormViewModel, ContactUsModel>(contactUsForm);
                 services.SaveData(contactDTO);
                 TempData["message"] = "ContactUs Data Saved Successfully";
                 ModelState.Clear();

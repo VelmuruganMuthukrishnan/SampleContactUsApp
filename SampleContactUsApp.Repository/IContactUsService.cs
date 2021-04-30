@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using SampleContactUsApp.Data.Model;
 namespace SampleContactUsApp.Repository
 {
-    public interface IContactUsForm
+    public interface IContactUsService
     {
-        void SaveData(ContactUsForm contactUsForm);
+        void SaveData(ContactUsModel contactUsForm);
     }
 }

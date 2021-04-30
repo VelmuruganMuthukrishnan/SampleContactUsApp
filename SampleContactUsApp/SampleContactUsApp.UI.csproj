@@ -127,6 +127,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MapperConfig\AutoMapperConfig.cs" />
     <Compile Include="Models\ViewModel\ContactUsFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -150,13 +151,13 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SampleContactUsApp.Data\SampleContactUsApp.Data.csproj">
+    <ProjectReference Include="..\SampleContactUsApp.Data\SampleContactUsApp.Domain.csproj">
       <Project>{35239700-dcab-4be1-9cdf-f73133ccb7c4}</Project>
-      <Name>SampleContactUsApp.Data</Name>
+      <Name>SampleContactUsApp.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SampleContactUsApp.Repository\SampleContactUsApp.Repository.csproj">
+    <ProjectReference Include="..\SampleContactUsApp.Repository\SampleContactUsApp.Contracts.csproj">
       <Project>{6172f2d4-2a58-446a-b775-c025a85777c1}</Project>
-      <Name>SampleContactUsApp.Repository</Name>
+      <Name>SampleContactUsApp.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\SampleContactUsApp.Services\SampleContactUsApp.Services.csproj">
       <Project>{57942f92-f7e3-48e8-81df-4071aff35a88}</Project>

@@ -46,13 +46,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SampleContactUsApp.Data\SampleContactUsApp.Data.csproj">
+    <ProjectReference Include="..\SampleContactUsApp.Data\SampleContactUsApp.Domain.csproj">
       <Project>{35239700-dcab-4be1-9cdf-f73133ccb7c4}</Project>
-      <Name>SampleContactUsApp.Data</Name>
+      <Name>SampleContactUsApp.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SampleContactUsApp.Repository\SampleContactUsApp.Repository.csproj">
+    <ProjectReference Include="..\SampleContactUsApp.Repository\SampleContactUsApp.Contracts.csproj">
       <Project>{6172f2d4-2a58-446a-b775-c025a85777c1}</Project>
-      <Name>SampleContactUsApp.Repository</Name>
+      <Name>SampleContactUsApp.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

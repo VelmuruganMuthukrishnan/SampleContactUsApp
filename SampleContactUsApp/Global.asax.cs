@@ -1,3 +1,6 @@
+using AutoMapper;
+using SampleContactUsApp.Data.Model;
+using SampleContactUsApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +16,8 @@ namespace SampleContactUsApp
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<ContactUsFormViewModel, ContactUsModel>());
+            var mapper = new Mapper(config);
         }
     }
 }

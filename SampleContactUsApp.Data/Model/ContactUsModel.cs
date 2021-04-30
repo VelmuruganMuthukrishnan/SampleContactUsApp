@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SampleContactUsApp.Data.Model
 {
-    public class ContactUsForm
+    public class ContactUsModel
     {
 
         public string FirstName { get; set; }
